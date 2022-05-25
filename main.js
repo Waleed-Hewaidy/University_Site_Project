@@ -10,3 +10,4 @@ sideMenu.classList.add('showSideLinks')
 closeMenuBtn.addEventListener('click',()=>{
 sideMenu.classList.remove('showSideLinks')
 })
+ 

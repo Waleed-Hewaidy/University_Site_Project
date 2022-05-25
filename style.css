@@ -17,6 +17,7 @@ html{
 
 .nav-container{
     width: 100%;
+    min-height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,11 +69,12 @@ html{
     left: 0rem;
     z-index: 20;
     width: max-content;
-    padding: .3rem;
+    padding: 1rem .5rem;
     font-weight: bold;
     background-color: rgb(117, 180, 223);
     transform: scale(0);
     transition: transform .5s ease-in-out;
+    border-radius:  0 0 5px 5px;
 }
 .nav-container .links .nav-link:hover .dep-sup-ul{
     transform: scale(1);
@@ -90,11 +92,12 @@ html{
     left: 0rem;
     z-index: 20;
     width: max-content;
-    padding: .3rem;
+    padding: 1rem .5rem;
     font-weight: bold;
     background-color: rgb(117, 180, 223);
     transform: scale(0);
     transition: transform .5s ease-in-out;
+    border-radius:  0 0 5px 5px;
 }
 .nav-container .links .nav-link:hover .pay-sup-ul{
     transform: scale(1);
@@ -102,6 +105,7 @@ html{
 .nav-container .pay-sup-ul .pay-sup-li{
     padding: .2rem;
     margin-bottom: .2rem;
+    width: 100%;
 }
 .nav-container .pay-sup-ul .pay-sup-li:hover{
     background-color: rgb(100, 158, 197);
@@ -226,8 +230,6 @@ html{
     padding: .2rem;
     margin-bottom: .3rem;
     letter-spacing: 3px;
-    transform: scale(.9);
-    transition: transform .2s ease-in-out;
 }
 .heroContainer .heroText h5{
     font-size: 1.2rem;
