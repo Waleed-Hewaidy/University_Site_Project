@@ -29,8 +29,12 @@ html{
     display: flex;
     justify-content: space-between;
     padding: .2rem;
-    font-family:'Odibee Sans', cursive; 
     font-size: 1.5rem;
+}
+.nav-container .logo h1{
+    font-family:'Odibee Sans', cursive; 
+    letter-spacing: 3px;
+    
 }
 .nav-container .logo i{
     font-size: 1.2rem;
@@ -39,21 +43,68 @@ html{
 }
 .nav-container .links{
     width: 70%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
 }
 .nav-container .links .nav-link{
     margin-left: 1.3rem;
     padding: .3rem;
     cursor: pointer;
+    /* width: 100%; */
     transition: border-bottom .2s ease-in-out;
     border-bottom: 2px solid transparent;
     text-transform: uppercase;
+    position: relative;
+
 }
 .nav-container .links .nav-link:hover{
     border-bottom: 2px solid rgb(247, 247, 247);
+}
+.nav-container .dep-sup-ul{
+    position: absolute;
+    top: 2rem;
+    left: 0rem;
+    z-index: 20;
+    width: max-content;
+    padding: .3rem;
+    font-weight: bold;
+    background-color: rgb(117, 180, 223);
+    transform: scale(0);
+    transition: transform .5s ease-in-out;
+}
+.nav-container .links .nav-link:hover .dep-sup-ul{
+    transform: scale(1);
+}
+.nav-container .dep-sup-ul .dep-sup-li{
+    padding: .2rem;
+    margin-bottom: .2rem;
+}
+.nav-container .dep-sup-ul .dep-sup-li:hover{
+    background-color: rgb(100, 158, 197);
+}
+.nav-container .pay-sup-ul {
+    position: absolute;
+    top: 2rem;
+    left: 0rem;
+    z-index: 20;
+    width: max-content;
+    padding: .3rem;
+    font-weight: bold;
+    background-color: rgb(117, 180, 223);
+    transform: scale(0);
+    transition: transform .5s ease-in-out;
+}
+.nav-container .links .nav-link:hover .pay-sup-ul{
+    transform: scale(1);
+}
+.nav-container .pay-sup-ul .pay-sup-li{
+    padding: .2rem;
+    margin-bottom: .2rem;
+}
+.nav-container .pay-sup-ul .pay-sup-li:hover{
+    background-color: rgb(100, 158, 197);
 }
 .nav-container .links .nav-link a{
     text-decoration: none;
@@ -87,6 +138,7 @@ html{
     background-color: rgb(117, 180, 223);
     transform: translateX(100%);
     transition: transform .2s ease-in-out;
+    z-index: 15;
 }
 .side-links-cont .closeMenuBtn{
     padding: .2rem;
@@ -116,6 +168,7 @@ html{
     padding: .4rem;
     margin: 1rem 0;
     width: 100%;
+    cursor: pointer;
 }
 .sidelinks .side-nav-link:hover{
     background-color:rgb(96, 161, 204) ;
@@ -130,4 +183,73 @@ html{
 }
 .showSideLinks{
     transform: translateX(0);
+}
+
+/* Hero Styling*/
+.heroContainer{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url('./imgs/hero.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heroContainer::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgb(26, 24, 24);
+    opacity: .9;
+   
+}
+.heroContainer .heroText{
+    color: rgb(255, 240, 240);
+    z-index: 12;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem;
+}
+.heroContainer .heroText h1{
+    font-weight: bold;
+    font-size: 3.5rem;
+    padding: .2rem;
+    margin-bottom: .3rem;
+    letter-spacing: 3px;
+    transform: scale(.9);
+    transition: transform .2s ease-in-out;
+}
+.heroContainer .heroText h5{
+    font-size: 1.2rem;
+    padding: .2rem;
+    margin-bottom: .3rem;
+   color: rgb(117, 180, 223);
+}
+.heroContainer .heroText p{
+    padding: .2rem;
+    margin-bottom: 1rem;
+}
+.heroContainer .heroText .heroBtn{
+    border: 2px solid rgb(117, 180, 223) ;
+    padding: .5rem 1.2rem;
+    border-radius: 3px;
+    background-color: transparent;
+    color:rgb(255, 240, 240) ;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    letter-spacing: 2px;
+}
+.heroContainer .heroText .heroBtn:hover{
+    background-color: rgb(117, 180, 223);
 }
