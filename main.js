@@ -1,4 +1,4 @@
-// Implementing Sideling (close&open)
+// Implementing Side Menu (close & open)
 
 const showMenuBtn = document.getElementById('hamburger')
 const closeMenuBtn = document.getElementById('closeMenuBtn')
