@@ -575,16 +575,22 @@ html{
     border: 2px solid var(--sky-blue-main);
     background-color: transparent;
     padding: .1rem .3rem;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(43, 41, 41);
+
 }
 .questionsCont .singleQuestionCont .singleQuestion .iconQuestionBtn:hover{
     transform: rotate(90deg);
-    transition: transform .2s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 .questionsCont .singleQuestionCont .singleQuestion span{
     font-size: 1.5rem;
     border-radius: 3px;
     text-align: center;
     cursor: pointer;
+
 }
 .questionsCont .singleQuestionCont .singleQuestion span i{
     width: 100%;
@@ -602,4 +608,122 @@ html{
 }
 .questionsCont .singleQuestionCont .singleAnswer.showAnswer{
     display: block;
+}
+/* Footer */
+.footerSection{
+    width: 100%;
+    padding: .5rem 1rem;
+    background-color: rgb(247, 247, 247);
+    border-top: 1px solid var(--light-grey);
+}
+.footerCont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+.footerSection .quickOptionsCont{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:.5rem;
+    position: relative;
+}
+.footerSection .quickOptionsCont .footerTextCont{
+    order: 3;
+    width: 30%;
+    height: 50%;
+    padding: .2rem;
+    text-align: center;
+    margin: auto;
+    font-size: 1rem;
+    position: relative;
+}
+.footerSection .quickOptionsCont .footerTextCont h6{
+    font-weight: bold;
+    padding: .2rem;
+    background-color: var(--light-grey);
+    border-radius: 5px;
+}
+.footerSection .quickOptionsCont .footerQuickOptions{
+    order: 2;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footerSection .quickOptionsCont .footerQuickOptions .quickOption{
+    padding: .2rem .5rem;
+    margin-bottom: .2rem;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: border-bottom .2s ease-in-out,  background-color .2s ease-in-out;
+    width: auto;
+    border-radius: 5px;
+    letter-spacing: 3px;
+}
+.footerSection .quickOptionsCont .footerQuickOptions .quickOption:hover{
+    border-bottom: 2px solid var(--sky-blue-main);
+    background-color: var(--sky-blue-main);
+
+}
+.footerSection .quickOptionsCont .socialmediaCont{
+    order: 1;
+    width: 30%;
+    padding: .5rem;
+    margin: .5rem;
+    position: relative;
+}
+.footerSection .quickOptionsCont .socialmediaCont:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--light-grey);
+}
+.footerSection .quickOptionsCont .socialmediaCont .socialMediaIconCont{
+    padding: .2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: 40px;
+    width: 100%;
+}
+.footerSection .quickOptionsCont .socialmediaCont .socialMediaIconCont i{
+    margin-right: .2rem;
+}
+.socialMediaTextCont{
+    transform: translateX(-150%);
+    transition: transform .2s ease-in-out;
+    font-weight: bold;
+    margin-left: .2rem;
+    text-align: center;
+    font-style: .5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.socialMediaIconCont:hover .socialMediaTextCont{
+    transform: translateX(0%);
+}
+.footerCont .locationCont{
+    width: 30%;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerCont .locationCont iframe{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
 }
