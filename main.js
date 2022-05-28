@@ -106,3 +106,16 @@ RandomReviewBtn.addEventListener('click',()=>{
     switchReview(currentPosition)
 })
 
+// Q & A Functionality
+
+const btns = document.querySelectorAll('.iconQuestionBtn')
+
+btns.forEach((btn)=>{
+  btn.addEventListener('click',(e)=>{
+    let SpecificBtn =e.currentTarget.parentElement.nextElementSibling
+    SpecificBtn.classList.toggle('showAnswer')
+    let plusIcon = btn.firstElementChild.firstElementChild;
+    btn.firstElementChild.innerHTML=`${plusIcon.classList.contains('fa-plus')? ` <i class="fa-solid fa-minus"></i>`:` <i class="fa-solid fa-plus"></i>`}`
+  })
+  
+})

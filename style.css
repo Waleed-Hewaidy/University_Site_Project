@@ -365,7 +365,6 @@ html{
     margin-bottom: 2rem;
     text-align: center;
     border-bottom: 4px solid var(--sky-blue-main);
-    
 }
 .reviews-section .singleReviewCont{
    display: grid;
@@ -516,4 +515,91 @@ html{
 .reviewUsCont .reviewBody button:hover{
     background-color: var(--sky-blue-dark);
    color: aliceblue;
+}
+
+/* Q & A Section */
+
+.qaCont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    border-top: 1px solid var(--light-grey);
+    background-color: rgb(250, 250, 250);
+}
+.qaCont h1{
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--sky-blue-main);
+}
+.questionsCont{
+    width: 50%;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--light-grey);
+    transition: box-shadow .1s ease-in-out;
+    border-radius: 5px;
+    margin: .3rem auto;
+}
+.questionsCont:hover{
+    box-shadow: 1px 1px 5px var(--sky-blue-main);
+}
+.questionsCont .singleQuestionCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    width: 100%;
+    margin: .5rem auto;
+    
+}
+.questionsCont .singleQuestionCont .singleQuestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--sky-blue-main);
+    font-weight: bold;
+  
+}
+.questionsCont .singleQuestionCont .singleQuestion .iconQuestionBtn{
+    border: 2px solid var(--sky-blue-main);
+    background-color: transparent;
+    padding: .1rem .3rem;
+}
+.questionsCont .singleQuestionCont .singleQuestion .iconQuestionBtn:hover{
+    transform: rotate(90deg);
+    transition: transform .2s ease-in-out;
+}
+.questionsCont .singleQuestionCont .singleQuestion span{
+    font-size: 1.5rem;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+}
+.questionsCont .singleQuestionCont .singleQuestion span i{
+    width: 100%;
+}
+.questionsCont .singleQuestionCont .singleQuestion .plus-icon{
+    display: inline-block;
+}
+.questionsCont .singleQuestionCont .singleQuestion .minus-icon{
+    display: none;
+}
+.questionsCont .singleQuestionCont .singleAnswer{
+    width: 100%;
+    padding: .2rem;
+    display: none;
+}
+.questionsCont .singleQuestionCont .singleAnswer.showAnswer{
+    display: block;
 }
