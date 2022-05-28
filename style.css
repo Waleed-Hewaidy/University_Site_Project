@@ -696,9 +696,14 @@ html{
     overflow: hidden;
     height: 40px;
     width: 100%;
+    transition: color .2s ease-in-out;
 }
 .footerSection .quickOptionsCont .socialmediaCont .socialMediaIconCont i{
     margin-right: .2rem;
+}
+
+.footerSection .quickOptionsCont .socialmediaCont .socialMediaIconCont:hover i{
+    color: var(--sky-blue-main);
 }
 .socialMediaTextCont{
     transform: translateX(-150%);
@@ -726,4 +731,38 @@ html{
     border-radius: 5px;
     width: 100%;
     height: 100%;
+}
+
+/* Copyrights Section */
+
+.copyrightCont{
+    width: 100%;
+    border-top: 1px solid var(--light-grey);
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.copyrightCont .copyTextCont{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.copyrightCont .copyTextCont span{
+    color: var(--sky-blue-dark);
+}
+.copyrightCont .creatorSM{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+.copyrightCont .creatorSM i{
+    padding: .2rem;
+    margin: .2rem;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
+.copyrightCont .creatorSM i:hover{
+    color: var(--sky-blue-dark);
 }
