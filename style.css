@@ -130,7 +130,7 @@ html{
     padding: .2rem;
     background-color: transparent;
     margin-right: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
     color: rgb(68, 69, 70);
     transform: rotate(0);
@@ -378,8 +378,8 @@ html{
 .reviews-section .singleReviewCont{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
-    width: 100%;
-    min-height: 100%;
+   width: 100%;
+   min-height: 100%;
 }
 .reviews-section .singleReview{
     border: 1px solid var(--light-grey);
@@ -391,6 +391,7 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(247, 247, 247);
 }
 .reviews-section .singleReview .singleReviewIMGCont{
     width: 300px;
@@ -434,10 +435,11 @@ html{
     color: var(--sky-blue-dark);
 }
 .reviewerText{
-    width: 100%;
+    width:100%;
     text-align: center;
     padding: .2rem;
     margin-bottom: 1rem;
+
 }
 .reviewBtnsCont{
     width: 100%;
@@ -483,33 +485,40 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(247, 247, 247);
 }
-.reviewUsCont h2{
+.reviewUsCont h2 , .contactUsCont h2{
     padding: .2rem;
     width: 100%;
     margin-bottom: 1rem;
     text-align: center;
+    height: 15%;
 }
-.reviewUsCont .reviewBody{
+.reviewUsCont .reviewBody, .contactBody{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    padding-bottom: 1rem;
 }
-.reviewUsCont .reviewBody input,textarea{
+.reviewUsCont .reviewBody input,textarea , .contactBody input ,textarea{
     outline: none;
     padding: .3rem;
     margin: .2rem  auto;
     width: 100%;
     text-align: left;
+    outline: none;
+    border: 1px solid var(--light-grey);
 }
-.reviewUsCont .reviewBody textarea{
+.reviewUsCont .reviewBody textarea, .contactBody textarea{
     min-width: 100%;
     max-width: 100%;
-    min-height: 13rem;
-    max-height: 13rem;
+    min-height:10rem;
+    max-height:10rem;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
 }
-.reviewUsCont .reviewBody button{
+.reviewUsCont .reviewBody button ,.contactBody button{
     width: 50%;
     margin: 3rem auto .2rem; 
     padding: .3rem;
@@ -521,9 +530,24 @@ html{
     font-weight: bold;
     transition: background-color .1s ease-in-out,color .1s ease-in-out;
 }
-.reviewUsCont .reviewBody button:hover{
+.reviewUsCont .reviewBody button:hover , .contactBody button:hover{
     background-color: var(--sky-blue-dark);
    color: aliceblue;
+}
+.singleReviewCont .contactUsCont{
+    border: 1px solid var(--light-grey);
+    box-shadow: 1px 1px 5px var(--sky-blue-main);
+    border-radius: 5px;
+    margin: 1rem ;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+}
+.reviewUsCont .reviewBody input , .singleReviewCont .contactUsCont input {
+    border-radius: 20px;
 }
 
 /* Q & A Section */
