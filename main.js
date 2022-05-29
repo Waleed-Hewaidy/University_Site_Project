@@ -1,6 +1,6 @@
 // Implementing Side Menu (close & open)
 
-const showMenuBtn = document.getElementById('hamburger')
+const showMenuBtn = document.getElementById('userIcon')
 const closeMenuBtn = document.getElementById('closeMenuBtn')
 const sideMenu = document.querySelector('.side-links-cont')
 const navContainer = document.querySelector('.nav-container')
@@ -23,6 +23,15 @@ navContainer.addEventListener('click', (e)=>{
 
 heroContainer.addEventListener('click', ()=>{
     sideMenu.classList.remove('showSideLinks')
+})
+
+// Added Later
+document.addEventListener('scroll',()=>{
+ if(window.pageYOffset >= navContainer.clientHeight){
+   navContainer.classList.add('fixedNav')
+ }else{
+  navContainer.classList.remove('fixedNav')
+ };
 })
 
 // Reviews Functionality

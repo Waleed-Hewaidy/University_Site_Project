@@ -35,6 +35,7 @@ html{
     padding: .3rem .5rem;
     background-color: var(--sky-blue-main);
     border-bottom: 1px solid rgb(255, 240, 240);
+    transition: top .5s linear;
 }
 .nav-container .logo{
     display: flex;
@@ -44,7 +45,7 @@ html{
 }
 .nav-container .logo h1{
     font-family:var(--secondary-font); 
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     
 }
 .nav-container .logo i{
@@ -124,24 +125,31 @@ html{
     color: rgb(255, 240, 240);
     font-weight: bold;
 }
-.nav-container .hamburger{
+.nav-container .userIcon{
     border: none;
     padding: .2rem;
     background-color: transparent;
-    margin-right: .2rem;
+    margin-right: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
     color: rgb(68, 69, 70);
     transform: rotate(0);
     transition:  transform .3s ease-in-out;
 }
-.nav-container .hamburger:hover{
+.nav-container .userIcon:hover{
     transform: rotate(90deg);
 }
-
+.fixedNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 35;
+    opacity: .9;
+}
 /* Styling Side Menu */
 .side-links-cont{
-    position: absolute;
+    position: fixed;
+    top:80px;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -182,6 +190,7 @@ html{
     margin: 1rem 0;
     width: 100%;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 .sidelinks .side-nav-link:hover{
     background-color:var(--sky-blue-dark) ;
